@@ -32,25 +32,58 @@ body {
   padding: 38px 45px 98px;
 }
 
+.menu__title {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.menu__subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.menu__title,
+.menu__subtitle {
+  font-family: var(--font-texto-bebas);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
+}
+
 .menu__cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax (auto, 900px));
+  grid-template-columns: repeat(2, minmax(auto, 900px));
   gap: 48px 30px;
+  width: 100%;
 }
 
 .card {
   width: 100%;
   max-width: 900px;
-  height: 450px;
   text-transform: uppercase;
   background-color: #292929;
   border-radius: 60px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0;
 }
 
 .card:nth-child(1) {
   background-image: url(../assets/hamburguer-original-1.png);
+}
+
+.card:nth-child(2) {
+  background-image: url(../assets/hamburguer-cheese-classic-2.png);
+}
+
+.card:nth-child(3) {
+  background-image: url(../assets/hamburguer-bbq-bacon-3.png);
+}
+
+.card:nth-child(4) {
+  background-image: url(../assets/hamburguer-bacon-beef-4.png);
 }
 
 .card__title {
@@ -75,6 +108,9 @@ body {
   font-family: var(--font-texto-bebas);
   text-align: right;
   margin-top: 8px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
 }
 
 .card__price {
@@ -83,9 +119,52 @@ body {
   line-height: 50px;
   border-radius: 16px;
   margin-top: 28px;
+  padding: 4px 12px;
 }
 
 .card__ingredients,
 .card__price {
   color: var(--white);
+}
+
+@media screen and (max-width: 1023px) {
+  .menu {
+    padding: 20px 24px 48px;
+    gap: 24px;
+  }
+
+  .menu__cards {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .menu__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .card {
+    padding: 20px 0;
+    max-width: 700px;
+  }
+
+  .card__title,
+  .card__price,
+  .menu__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card__title,
+  .card__ingredients,
+  .card__price {
+    margin-right: 24px;
+  }
+
+  .card__ingredients {
+    margin-right: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
