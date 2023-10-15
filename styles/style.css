@@ -32,18 +32,18 @@ body {
   padding: 38px 45px 98px;
 }
 
-.menu__title {
+.section__title {
   font-size: 44px;
   font-weight: 700;
 }
 
-.menu__subtitle {
+.section__subtitle {
   font-size: 32px;
   font-weight: 400;
 }
 
-.menu__title,
-.menu__subtitle {
+.section__title,
+.section__subtitle {
   font-family: var(--font-texto-bebas);
   text-align: center;
   text-transform: uppercase;
@@ -62,7 +62,7 @@ body {
   width: 100%;
   max-width: 900px;
   text-transform: uppercase;
-  background-color: #292929;
+  background-color: var(--background-header);
   border-radius: 60px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,7 +127,112 @@ body {
   color: var(--white);
 }
 
+.drinks {
+  border: 4px solid var(--background-banner-location);
+  border-radius: 44px;
+  padding: 44px 220px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.drinks__title {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--laranja-destaque);
+}
+
+.drinks__details {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 400;
+  color: var(--background-banner-location);
+}
+
+.drinks__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.drinks__items .drinks__details:nth-child(2),
+.drinks__items .drinks__details:nth-child(5),
+.drinks__items .drinks__details:nth-child(8),
+.drinks__price .drinks__details:nth-child(2),
+.drinks__price .drinks__details:nth-child(5),
+.drinks__price .drinks__details:nth-child(8) {
+  margin-top: 24px;
+}
+
+.drinks__items .drinks__details:nth-child(2):before,
+.drinks__items .drinks__details:nth-child(5):before,
+.drinks__items .drinks__details:nth-child(8):before {
+  content: "";
+  background-color: var(--black);
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  margin-top: -12px;
+}
+
+.drinks__title,
+.drinks__details {
+  font-family: var(--font-texto-bebas);
+  text-transform: uppercase;
+}
+
+.drinks__items,
+.drinks__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  background-color: var(--background-banner-location);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 38px 0;
+}
+
+.location .section__title,
+.location .section__subtitle {
+  color: var(--white);
+}
+
+.location .section__subtitle {
+  margin-bottom: 15px;
+}
+
+.location iframe {
+  max-width: calc(100% - 40px);
+  margin: auto;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.location__address {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
 @media screen and (max-width: 1023px) {
+  .drinks,
+  .section__title,
+  .section__subtitle {
+    max-width: 450px;
+    min-width: 300px;
+  }
+
   .menu {
     padding: 20px 24px 48px;
     gap: 24px;
@@ -139,7 +244,7 @@ body {
     gap: 16px;
   }
 
-  .menu__title {
+  .section__title {
     font-size: 32px;
     line-height: 36px;
   }
@@ -151,7 +256,7 @@ body {
 
   .card__title,
   .card__price,
-  .menu__subtitle {
+  .section__subtitle {
     font-size: 20px;
     line-height: 24px;
   }
@@ -163,8 +268,26 @@ body {
   }
 
   .card__ingredients {
-    margin-right: 24px;
     font-size: 16px;
+    line-height: 20px;
+  }
+
+  .drinks {
+    padding: 15px 30px;
+  }
+
+  .drinks__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .drinks__details {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .location__address {
+    font-size: 14px;
     line-height: 20px;
   }
 }
