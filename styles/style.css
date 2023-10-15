@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar&display=swap");
+
+:root {
+  --background-main: #e5e5e5;
+  --background-header: #292929;
+  --background-banner-location: #14100c;
+  --laranja-destaque: #f8af35;
+  --amarelo-separador-banner: #ffd413;
+  --white: #ffffff;
+  --black: #000000;
+  --font-texto: "Bebas Neue", sans serif;
+  --font-btn-titles: "Rubik Spray Paint", sans-serif;
+  --font--main: "Sigmar", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-header);
+  color: var(--white);
+  padding: 10px 20px;
+  font-family: var(--font--main);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo__imagem {
+  width: 80px;
+  height: 80px;
+}
+
+.logo__descricao {
+  font-size: 2rem;
+}
+
+.logo__palavra-destaque {
+  color: var(--laranja-destaque);
+}
+
+.nav__menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  margin-right: 4rem;
+  font-size: 1.4rem;
+}
+
+.nav__menu-item .nav__menu-link {
+  padding: 10px;
+}
+
+.button__link-destaque {
+  background-color: var(--laranja-destaque);
+  color: var(--white);
+  font-family: var(--font--main);
+  font-size: inherit;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 7px #ffd41362;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.button__link-destaque:hover {
+  transform: scale(1.08);
+}
+
+.banner__container {
+  background-color: var(--background-banner-location);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.banner__container-textos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-left: 10rem;
+}
+
+.banner__titulo {
+  font-family: var(--font--main);
+  color: var(--white);
+  font-size: 3rem;
+  letter-spacing: 3px;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+}
+
+.banner__linha-divisoria {
+  width: 50%;
+  height: 5px;
+  background-color: var(--amarelo-separador-banner);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.banner__texto-descricao {
+  font-family: var(--font-texto);
+  font-size: 2rem;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner__imagem {
+  width: 50%;
+  margin-top: 100px;
+}
+
+.cardapio__container-titulo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardapio__titulo {
+  font-size: 2rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-family: var(--font--main);
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.282);
+}
+
+.cardapio__texto-descricao {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--font--main);
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.282);
+}
+
+.cardapio__card-container {
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.card-hamburguer {
+  height: 450px;
+  width: 100%;
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+}
+
+.card1 {
+  background-image: url(../assets/hamburguer-original-1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card2 {
+  background-image: url(../assets/hamburguer-cheese-classic-2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card3 {
+  background-image: url(../assets/hamburguer-bbq-bacon-3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card4 {
+  background-image: url(../assets/hamburguer-bacon-beef-4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card_hamburguer-titulo {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: var(--font-btn-titles);
+  color: var(--laranja-destaque);
+  text-align: right;
+  padding-bottom: 2rem;
+}
+
+.card__hamburguer-descricao {
+  font-size: 1.2rem;
+  color: var(--white);
+  font-family: var(--font--main);
+  text-align: right;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.card__hamburguer-preco {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--laranja-destaque);
+  width: 140px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.bebidas__tabela-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 10rem;
+  border: solid 2px black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bebidas__lista-titulo {
+  font-size: 2.2rem;
+  font-family: var(--font--main);
+  font-weight: 400;
+  color: var(--laranja-destaque);
+}
+
+.bebidas__lista-nomes {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+  font-family: var(--font--main);
+  font-weight: 400;
+}
+
+.bebidas__linha-divisoria {
+  height: 10px;
+  background-color: var(--background-header);
+}
